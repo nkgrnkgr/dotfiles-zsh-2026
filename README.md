@@ -17,6 +17,7 @@ brew install atuin     # コマンド履歴検索
 brew install starship  # プロンプト
 brew install mise      # ランタイムバージョン管理
 brew install gitui     # Git TUI クライアント
+brew install gh        # GitHub CLI
 ```
 
 ### Nerd Font
