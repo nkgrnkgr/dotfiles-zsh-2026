@@ -48,3 +48,6 @@ bindkey '^q' fzf-zoxide-cd
 # mise
 eval "$(mise activate zsh)"
 
+# alias
+alias g='gitui'
+

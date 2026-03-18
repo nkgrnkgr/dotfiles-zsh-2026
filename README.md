@@ -15,6 +15,7 @@ brew install zoxide    # スマートな cd
 brew install atuin     # コマンド履歴検索
 brew install starship  # プロンプト
 brew install mise      # ランタイムバージョン管理
+brew install gitui     # Git TUI クライアント
 ```
 
 ## Create Link
