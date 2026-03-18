@@ -1,0 +1,9 @@
+shell = "zsh"
+
+# コマンドの入力履歴に基づくサジェスト
+[plugins.zsh-autosuggestions]
+github = "zsh-users/zsh-autosuggestions"
+
+# コマンドのシンタックスハイライト（色付け）
+[plugins.zsh-syntax-highlighting]
+github = "zsh-users/zsh-syntax-highlighting"

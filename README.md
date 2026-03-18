@@ -27,6 +27,8 @@ brew install gitui     # Git TUI クライアント
 ln -sf $(pwd)/dotfiles/.zshrc ~/.zshrc
 ln -sf $(pwd)/dotfiles/.gitconfig ~/.gitconfig
 ln -sf $(pwd)/dotfiles/.vimrc ~/.vimrc
+mkdir -p ~/.config/sheldon
+ln -sf $(pwd)/dotfiles/sheldon_plugins.toml ~/.config/sheldon/plugins.toml
 ```
 
 その後、設定を反映します。
