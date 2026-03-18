@@ -3,3 +3,6 @@
 	cm = commit
 	co = checkout
 	b = branch
+[user]
+	name = nkgrnkgr
+	email = beefupme@gmail.com
