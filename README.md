@@ -9,6 +9,7 @@ https://brew.sh
 ### Install tools via Homebrew
 
 ```bash
+brew install git       # バージョン管理
 brew install sheldon   # プラグインマネージャー
 brew install fzf       # あいまい検索
 brew install zoxide    # スマートな cd
