@@ -1,7 +1,6 @@
 # ==========================================
 # ツールとプラグインの初期化
 # ==========================================
-
 # 1. プラグインマネージャー (Sheldon)
 eval "$(sheldon source)"
 
@@ -50,4 +49,4 @@ eval "$(mise activate zsh)"
 
 # alias
 alias g='gitui'
-
+alias pn='pnpm'
