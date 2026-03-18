@@ -24,6 +24,7 @@ brew install gitui     # Git TUI クライアント
 
 ```bash
 ln -sf $(pwd)/dotfiles/.zshrc ~/.zshrc
+ln -sf $(pwd)/dotfiles/.gitconfig ~/.gitconfig
 ```
 
 その後、設定を反映します。

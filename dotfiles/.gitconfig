@@ -1,0 +1,5 @@
+[alias]
+	sw = switch
+	cm = commit
+	co = checkout
+	b = branch
