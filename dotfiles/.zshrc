@@ -44,9 +44,33 @@ zle -N fzf-zoxide-cd
 # 4. Ctrl + Q (^q) にバインド
 bindkey '^q' fzf-zoxide-cd
 
+# 5. zsh + fzf で「あの時作業していたあのブランチ」を快適に探す https://www.mizdra.net/entry/2024/10/19/172323
+# fzf のデフォルトのオプション。お好みで。ここでは peco っぽくなるよう調整してる。
+export FZF_DEFAULT_OPTS="--reverse --no-sort --no-hscroll --preview-window=down"
+
+user_name=$(git config user.name)
+fmt="\
+%(if:equals=$user_name)%(authorname)%(then)%(color:default)%(else)%(color:brightred)%(end)%(refname:short)|\
+%(committerdate:relative)|\
+%(subject)"
+function select-git-branch-friendly() {
+  selected_branch=$(
+    git branch --sort=-committerdate --format=$fmt --color=always \
+    | column -ts'|' \
+    | fzf --ansi --exact --preview='git log --oneline --graph --decorate --color=always -50 {+1}' \
+    | awk '{print $1}' \
+  )
+  BUFFER="${LBUFFER}${selected_branch}${RBUFFER}"
+  CURSOR=$#LBUFFER+$#selected_branch
+  zle redisplay
+}
+zle -N select-git-branch-friendly
+bindkey '^b' select-git-branch-friendly
+
 # mise
 eval "$(mise activate zsh)"
 
 # alias
 alias g='gitui'
 alias pn='pnpm'
+
